@@ -1,0 +1,5 @@
+/build
+/release
+/debug
+release_sign.prop
+release.keystore
