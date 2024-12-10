@@ -42,8 +42,13 @@ private fun getRootService(): IBinder {
 }
 
 private fun getPowercfg(): Powercfg {
-    val file = File("/data/powercfg.json")
-    return Json.decodeFromString(Powercfg.serializer(), file.readText())
+    try {
+        val file = File("/data/powercfg.json")
+        return Json.decodeFromString(Powercfg.serializer(), file.readText())
+    } catch (e: Exception) {
+        val file = File("/data/fas_rs_mod.json")
+        return Json.decodeFromString(Powercfg.serializer(), file.readText())
+    }
 }
 
 @Serializable
