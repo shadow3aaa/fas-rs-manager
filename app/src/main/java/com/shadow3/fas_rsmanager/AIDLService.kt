@@ -3,7 +3,6 @@ package com.shadow3.fas_rsmanager
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.IBinder
-import android.util.Log
 import com.topjohnwu.superuser.ipc.RootService
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
